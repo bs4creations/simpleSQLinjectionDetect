@@ -1,3 +1,7 @@
+
+/* Just a simple PHP class to decet possible SQL injection attempts
+**************************************************************************/
+
 class simpleSQLinjectionDetect
 {				
 	public function detect()
@@ -8,7 +12,7 @@ class simpleSQLinjectionDetect
 				$data  = date("d-m-Y H:i:s") . ' - ';
 				$data .= $_SERVER['REMOTE_ADDR'] . ' - ';
 				$data .= urldecode($_SERVER['QUERY_STRING']);
-				@file_put_contents('./logs/sql.injection.txt', $data . PHP_EOL, FILE_APPEND);
+				@file_put_contents('sql.injection.txt', $data . PHP_EOL, FILE_APPEND);
 				unset($_GET);
 				exit();
 			}
