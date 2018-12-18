@@ -1,4 +1,4 @@
-# simpleSQLinjectionDetect v1.0
+# simpleSQLinjectionDetect v1.1
 
 Simple PHP class for SQL injection detection.
 
